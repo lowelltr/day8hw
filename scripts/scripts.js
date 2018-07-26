@@ -15,10 +15,11 @@ class AddressBook {
     for ( let i=0; i< this.contacts.length; i++){
         console.log(this.contacts[i]);
   }
-    
-      }
 
-}
+  update(index);
+      this.contacts.forEach();
+  }
+    }
 
 class Contact {
   constructor(name, relation, email, phone) {
@@ -52,10 +53,10 @@ while(true){
     } else if (userPrompt.toLowerCase()==="update"){
            
         let update=prompt("What do you want to update?");
-           book.update();
-            updateItem=prompt("Which item would you like to update: name, email, phone, or relation?");
+            book.update();
+           let updateItem=prompt("Which item would you like to update: name, email, phone, or relation?");
             book.updateItem(Contact);
-            newValue=prompt(`What is your new ${updateItem}`);
+           let newValue=prompt(`What is your new ${updateItem}`);
             book.newValue(Contact);
             AddressBook.Contact[update][updateItem] = (newValue);
         }
